@@ -7,6 +7,6 @@ public interface IEventService
     Task<Event> GetByIdAsync(int id);
     Task<List<Event>> GetAllAsync();
     Task CreateAsync (Event @event);
-    Task UpdateAsync(Event @event);
-    Task DeleteAsync(int id);
+    Task<bool> UpdateAsync(int id, Event updatedEvent);
+    Task<bool> DeleteAsync(int id);
 }
